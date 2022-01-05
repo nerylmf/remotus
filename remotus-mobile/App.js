@@ -1,21 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
+//remotus
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Image } from 'react-native'
+import Routes from './components/Routes/Routes';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () =>
+     <SafeAreaProvider>
+          <Image source={require('./components/img/sysbar.svg')} style={{ height: 24, width: '100%' }} />
+          <Routes />
+     </SafeAreaProvider>
+
+export default App
+
