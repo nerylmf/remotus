@@ -7,30 +7,36 @@ import Home from "../Home/Home";
 import Favoritos from "../Favoritos/Favoritos";
 import Perfil from "../Perfil/Perfil";
 import Visitados from "../Visitados/Visitados";
-// import { Icon } from 'react-native-elements'
 import { ButtonVisitados, ButtonFavoritos, ButtonPerfil, ButtonPesquisar, ButtonHome } from "./Buttons"
-// import ListaPesquisar from './Pesquisar/ListaPesquisar'
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator()
 
 
-function Tabs() {
-    return (
+// function Tabs() {
+export default function Routes() {
+
+return (
         <Tab.Navigator
             initialRouteName="Pesquisar"
             tabBarOptions={{
                 style: {
                     backgroundColor: '#0D1321',
                     borderTopColor: 'transparent',
-                    height: 70,
-                    width: '100%'
+                    height: 80,
+                    width: '100%',
+                    paddingHorizontal:10,
+                    
                 },
 
-                tabStyle: {
-                    paddingHorizontal: 16,
-                    paddingVertical: 14,
-                }
+                // tabStyle: {
+                //     // paddingHorizontal: 16,
+                //     // paddingVertical: 14,
+                //     // marginHorizontal:16,
+                //     // marginVertical:14
+                //     alignItems:'center',
+                //     justifyContent:'center'
+                // }
             }}
         >
             <Tab.Screen
@@ -93,23 +99,3 @@ function Tabs() {
         </Tab.Navigator>
     )
 }
-export default function Routes() {
-    return (
-        <NavigationContainer>
-
-            <Stack.Navigator>
-                <Stack.Screen
-                    name="Pesquisar" component={Tabs}
-                    options={{ headerShown: false }} />
-
-            </Stack.Navigator>
-
-        </NavigationContainer>
-    )
-}
-
-
-
-
-
-
