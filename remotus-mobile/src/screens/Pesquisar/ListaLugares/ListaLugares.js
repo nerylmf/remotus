@@ -12,19 +12,19 @@ const botoes = [
         btnFilter: 'CAFETERIA'
     },
     {
-        btnFilter:'RESTAURANTE'
+        btnFilter: 'RESTAURANTE'
     },
-    
+    {
+        btnFilter: 'BAR'
+    }
+
+
 ]
-
-
-
-const ListaLugares = ({navigation}) => {
+const ListaLugares = ({ navigation }) => {
 
     const [botao, setBotao] = useState('TODOS')
     const [list, setList] = useState(Lugares)
     const [searchText, setSearchText] = useState('')
-
 
     useEffect(() => {
         if (searchText === '') {
@@ -102,8 +102,8 @@ const ListaLugares = ({navigation}) => {
                     list.map(
                         (local) => {
                             return (
-                                <TouchableOpacity style={Estilos.item} 
-                                onPress={()=>{navigation.navigate('Local',{lugarId:local})}}
+                                <TouchableOpacity style={Estilos.item}
+                                    onPress={() => { navigation.navigate('Local', { lugarId: local }) }}
 
                                 >
                                     <View style={Estilos.inforFavo}>
@@ -111,7 +111,6 @@ const ListaLugares = ({navigation}) => {
                                             <Image source={{ uri: local.uri }} style={Estilos.img} />
                                             <View style={Estilos.containerInfor}>
                                                 <Text style={Estilos.titulo} >{local.nome}</Text>
-                                                {/* <Text style={Estilos.titulo} >{cafe.status}</Text> */}
 
                                                 <Text style={[Estilos.txtRegular, { marginTop: 3 }]} >{local.tipo}</Text>
                                                 <View style={Estilos.infor}>
@@ -120,7 +119,6 @@ const ListaLugares = ({navigation}) => {
                                                         <Text style={Estilos.txtRegular}> 4,8 (8)</Text>
                                                     </View>
 
-                                                    {/* <View style={Estilos.ponto}> </View> */}
                                                     <Text style={Estilos.ponto}>.</Text>
                                                     <View style={Estilos.alinhar}>
                                                         <Icon name='place' type='material' size={17} iconStyle={Estilos.marrom} />
@@ -131,6 +129,8 @@ const ListaLugares = ({navigation}) => {
                                             </View>
                                         </View>
                                         <View style={Estilos.containerFavoritar} >
+                                            <Icon name='favorite-outline' type='material' size={25}/>
+
                                             {/* <Image source={require('../img/FavoritoLinha.svg')} style={Estilos.btnFavoritar} /> */}
                                         </View>
                                     </View>
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
 
     },
     txtFiltro: {
-        fontFamily: 'Inter-Regular.ttf',
+        // fontFamily: 'Inter-Regular.ttf',
         fontWeight: '400',
         letterSpacing: 1.5,
         fontSize: 13,
@@ -194,20 +194,6 @@ const styles = StyleSheet.create({
         padding: 10,
         justifyContent: 'center'
     },
-    textTab: {
-        fontSize: 16
-    },
-    btnTabActive: {
-        backgroundColor: 'pink'
-    },
-    textTabActive: {
-        color: 'blue'
-    },
-    itemContainer: {
-        flexDirection: 'row',
-        paddingVertical: 15
-    },
-
 
 
 })

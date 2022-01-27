@@ -21,7 +21,7 @@ export function Mapa() {
     `;
     return (
         <View >
-            <SvgXml xml={mapa} style={{height: 180, width: 324, borderRadius: 10 }} />
+            <SvgXml xml={mapa} style={{height: 180, width: 324, borderRadius: 10, justifyContent:'center', alignItems:'center', marginTop: 20 }} />
         </View>
     )
 }

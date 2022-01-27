@@ -1,12 +1,17 @@
 export default
 [
-    {
+    {   
+        id:1,
         uri: 'https://direcaoconsultoria.com.br/wp-content/uploads/2020/09/propaganda-enganosa-768x509.jpg',
         nome: 'Nome do restaurante',
         tipo: 'Resturante',
         localizacao: 'Bairro Central',
-        id:1,
-        wifi:'Wi-Fi grátis'
+        wifi:'Wi-Fi grátis',
+        dia: '01',
+        mes: 'Março',
+        ano: '2022',
+        hora: '14 : 00',
+
  
     },
     {

@@ -12,14 +12,11 @@ export const styles = StyleSheet.create({
         btnFiltro: {
             backgroundColor: '#494C54',
             borderRadius: 5,
-            paddingHorizontal: 8,
-            paddingTop: 4,
-            paddingBottom: 5,
-            marginRight: 10,
-    
+            paddingHorizontal: 9,
+            paddingVertical:5,
+            marginRight: 10,    
         },
         txtFiltro: {
-            fontFamily: 'Inter-Regular.ttf',
             fontWeight: '400',
             letterSpacing: 1.5,
             fontSize: 13,
@@ -28,38 +25,10 @@ export const styles = StyleSheet.create({
         btnFiltroAtivado: {
             backgroundColor: '#A96B3C',
         },
-    
-    
-    
-    
-    
         container: {
             flex: 1,
             paddingHorizontal: 10,
             justifyContent: 'center'
-        },
-        listTab: {
-            flexDirection: 'row',
-            alignSelf: 'center',
-            marginBottom: 20
-    
-        },
-        btnTab: {
-            width: Dimensions.get('window').width / 3.5,
-            flexDirection: 'row',
-            borderWidth: 0.5,
-            borderColor: 'green',
-            padding: 10,
-            justifyContent: 'center'
-        },
-        textTab: {
-            fontSize: 16
-        },
-        btnTabActive: {
-            backgroundColor: 'pink'
-        },
-        textTabActive: {
-            color: 'blue'
         },
         itemContainer: {
             flexDirection: 'row',
@@ -69,30 +38,17 @@ export const styles = StyleSheet.create({
            
             backgroundColor: 'white',
             flexDirection:'column',
-            flex: 1,
-    
-            
+            flex: 1,            
         },
         buttonsFiltros: {
             flexDirection: 'row',
             paddingHorizontal: 16,
             paddingVertical: 15
         },
-        btnFiltro: {
-            backgroundColor: '#A96B3C',
-            borderRadius: 5,
-            paddingHorizontal: 9,
-            paddingVertical:5,
-            marginRight: 10,
-          
-     
-        },
+
         btnFavoritar: {
             width: 21.6,//16.35,
-            height: 19//15,
-     
-     
-     
+            height: 19//15,     
         },
         container: {
             flex: 1,
@@ -143,15 +99,10 @@ export const styles = StyleSheet.create({
             width: 79,
             height: 79,
             borderRadius: 50
-            // backgroundColor: 'blue',
-        },
-     
-       
-       
+        },     
         linha: {
             borderBottomWidth: 1,
             borderBottomColor: '#0D132132',
-     
         },
         marrom: {
             color: '#A96B3C'
@@ -179,7 +130,6 @@ export const styles = StyleSheet.create({
      
         titulo: {
             fontWeight: '700',
-            // fontFamily: 'Inter-Regular.ttf',
             fontSize: 16,
             lineHeight: 19,
             letterSpacing: 0.15,
@@ -197,10 +147,6 @@ export const styles = StyleSheet.create({
      
         },
     
-    
-        // novos
-    
-       
         txtBranco: {
             // fontFamily: 'Inter-Regular.ttf',
             fontWeight: '700',

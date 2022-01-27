@@ -3,30 +3,27 @@ import { StyleSheet, View, Text, Button } from 'react-native'
  
 
 export const styles = StyleSheet.create({
+
+    
     conteinerPesquisar: {
-        // width: 328,
         backgroundColor: 'white',
         flex: 1,
         height: 50,
         padding: 8,
         borderRadius: 25,
-        // marginBottom: 15,
         borderBottomWidth: 4,
         borderTopWidth: 1,//0.1
         borderLeftWidth: 0.9,
         borderRightWidth: 0.9,
         borderColor: '#E5E5E5',
         flexDirection: 'row',
-        // alterações
-        // marginHorizontal:16,
         marginBottom: 30,
         marginTop: 20
-        // elevation: 2,
 
     },
 
     titulo: {
-        // fontFamily: 'Inter-Regular.ttf',
+        // fontFamily: 'Inter_400Regular',
         fontWeight: 'bold',
         fontSize: 18,
         lineHeight: 19,
@@ -36,8 +33,6 @@ export const styles = StyleSheet.create({
     },
 
     containerLocais: {
-        // marginTop: 30,
-        // alterações Android
         marginBottom: 35
     },
     containerCards: {
@@ -57,11 +52,9 @@ export const styles = StyleSheet.create({
         height: 150,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        // backgroundColor: 'blue',
     },
     containerTxt: {
         justifyContent: 'center',
-        // marginHorizontal: 15,
         marginVertical: 13
 
 
@@ -102,7 +95,6 @@ export const styles = StyleSheet.create({
     },
 
     posicionarMenu: {
-        // position: 'fixed',
         width: '100%',
         height: 70,
         bottom: 0,

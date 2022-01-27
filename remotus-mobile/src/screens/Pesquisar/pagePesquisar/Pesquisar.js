@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from "react"
-import { Image, ScrollView, Text, View, TextInput, StyleSheet, Button } from "react-native"
-import { Icon } from 'react-native-elements'
+import { Image, ScrollView, Text, View, TextInput, StyleSheet, Button, SafeAreaView } from "react-native"
 import { TouchableOpacity, TouchableWithoutFeedback } from "react-native"
 import { Estilos } from "../Estilos"
 import Lugares from "../Lugares/Lugares"
@@ -10,6 +9,9 @@ import Restaurantes from "../Lugares/Restaurantes"
 import Bares from "../Lugares/Bares"
 
 import { styles } from "./styles"
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons"
+import { Icon } from "react-native-elements"
+import { AntDesign, Entypo } from "@expo/vector-icons"
 
 const Pesquisar = ({ navigation }) => {
 
@@ -17,41 +19,20 @@ const Pesquisar = ({ navigation }) => {
     const [restaurantes, setRestaurantes] = useState(Restaurantes)
     const [bar, setBar] = useState(Bares)
 
-
-
-
-    // useEffect(()=>{
-
-    // })
-
-    // ****************************************************
-       
-     // ****************************************************
-
-
     return (
+
         <ScrollView
             style={Estilos.container}
             showsVerticalScrollIndicator={false}
         >
 
             <TouchableWithoutFeedback
-                // style={[style.conteinerPesquisar,]}
                 onPress={() => navigation.navigate('ListaLugares')}
-                // onPress={() => navigation.navigate('Local')}
-
 
             >
-                <View style={styles.conteinerPesquisar}>
-                    {/*{ marginHorizontal: 16 }*/}
-                    <Icon name='search' type='material' size={30} iconStyle={Estilos.iconPesquisar} />
-                    {/* <Image source={require('../img/search.svg')} style={style.iconPesquisar} /> */}
-                    {/* <Text
-                        style={Estilos.inputPesquisar}
-                        // value={searchText}
-                        // onChangeText={(t) => setSearchText(t)}
+                <View style={[styles.conteinerPesquisar]}>
+                   <Icon name='search' size={24} iconStyle={Estilos.iconPesquisar}  />
 
-                    /> */}
                 </View>
             </TouchableWithoutFeedback>
 
@@ -69,13 +50,13 @@ const Pesquisar = ({ navigation }) => {
                             (cafe) => {
                                 return (
                                     <TouchableOpacity style={styles.card}
-                                        onPress={()=>{navigation.navigate('Local',{lugarId:cafe})}}
+                                        onPress={() => { navigation.navigate('Local', { lugarId: cafe }) }}
                                     >
                                         <Image source={{ uri: cafe.uri }} style={styles.img} />
 
                                         <View style={styles.alinhar}>
                                             <View style={styles.containerTxt}>
-                                                <Text style={Estilos.txtBranco }>{cafe.nome}</Text>
+                                                <Text style={Estilos.txtBranco}>{cafe.nome}</Text>
                                                 <View style={styles.conteinerInfor}>
                                                     <Icon name='star' type='material' size={17} iconStyle={styles.iconVerde} />
                                                     <Text style={styles.txtRegular}> 4,8 (8)</Text>
@@ -119,10 +100,9 @@ const Pesquisar = ({ navigation }) => {
                         restaurantes.map(
                             (restaurante) => {
                                 return (
-                                    // <View style={styles.card}>
                                     <TouchableOpacity style={styles.card}
-                                    onPress={()=>{navigation.navigate('Local',{lugarId:restaurante})}}
-                                >
+                                        onPress={() => { navigation.navigate('Local', { lugarId: restaurante }) }}
+                                    >
                                         <Image source={{ uri: restaurante.uri }} style={styles.img} />
 
                                         <View style={styles.alinhar}>
@@ -131,7 +111,6 @@ const Pesquisar = ({ navigation }) => {
                                                 <View style={styles.conteinerInfor}>
                                                     <Icon name='star' type='material' size={17} iconStyle={styles.iconVerde} />
                                                     <Text style={styles.txtRegular}> 4,8 (8)</Text>
-                                                    {/* <View style={styles.ponto}> </View> */}
                                                     <Text style={styles.ponto}>.</Text>
                                                     <Icon name='place' type='material' size={17} iconStyle={styles.iconVerde} />
                                                     <Text style={styles.txtRegular}> {restaurante.localizacao} </Text>
@@ -159,7 +138,7 @@ const Pesquisar = ({ navigation }) => {
             {/* teste com outros lugares */}
 
 
-         
+
 
             <View style={styles.containerLocais}>
                 <Text style={styles.titulo}> Bares</Text>
@@ -174,7 +153,7 @@ const Pesquisar = ({ navigation }) => {
                             (bar) => {
                                 return (
                                     <TouchableOpacity style={styles.card}
-                                        onPress={() => { navigation.navigate('Local', { lugarId: bar}) }}
+                                        onPress={() => { navigation.navigate('Local', { lugarId: bar }) }}
                                     >
                                         <Image source={{ uri: bar.uri }} style={styles.img} />
 

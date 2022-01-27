@@ -1,29 +1,20 @@
 import React, { Component, useEffect, useState } from "react"
-
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Image, Animated } from 'react-native'
 import { Icon } from "react-native-elements"
 import { IconAr, IconCadeira, IconCardapio, IconChat, IconFavorito, IconReservado, IconShare, IconSol, IconTomada, IconVoltar, IconWifi } from "../../../Routes/Buttons"
+import { Mapa } from "../../../assets/Icon/Mapa/Mapa";
 import { styles } from "./styles"
 import { Dimensions } from 'react-native';
 import { Estilos } from "../Estilos"
-import { Overlay } from "react-native-elements"
 import { AntDesign, Entypo } from "@expo/vector-icons"
-import { Mapa } from "../../../assets/Icon/Mapa/Mapa"
-
+import calendario from "../Lugares/Calendario";
 
 const Local = (props) => {
-    const initialState = { id: '', uri: '', nome: '', tipo: '', localizacao: '' }
+    const initialState = { id: '', uri: '', nome: '', tipo: '', localizacao: '', datas: '', dia: '', mes: '', ano: '', hora: '' }
     const [lugar, setLugar] = useState(initialState)
-
+    const [calendar, setCalendar] = useState(calendario)
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
-
-
-
-
-
-
-
     const animation = new Animated.Value(0)
     let open
     const toggleOverlay = () => {
@@ -66,7 +57,6 @@ const Local = (props) => {
                 style={{ marginBottom: 70 }} //70
                 showsVerticalScrollIndicator={false}
             >
-                {/* <View style={styles.imgLocal}></View> */}
                 <View style={styles.buttonsCab}>
                     <TouchableOpacity style={styles.btnCab}
                         onPress={() => props.navigation.navigate('Pesquisar')}>
@@ -185,29 +175,54 @@ const Local = (props) => {
                 <View style={styles.containerDescricao}>
                     <Text style={styles.subtitulo} >Mapa</Text>
                     <Mapa />
-                    {/* <View style={{ height: 180, width: 324, backgroundColor: 'green', borderRadius: 10 }}></View> */}
                 </View>
 
                 <View style={styles.linha}></View>
 
                 {/* Avaliações */}
-                <View style={styles.containerDescricao}>
+                {/* <View style={styles.containerDescricao}>
                     <Text style={styles.subtitulo} >8 Avaliações</Text>
-                   
-                </View>
+
+                </View> */}
 
 
 
             </ScrollView>
 
 
-
+            {/* OVERLAY */}
             <View style={estilos.container}>
 
                 <Animated.View style={[styles.overlay, overlayStyle]}>
-                    <ScrollView style={styles.datas}>
-                        <Text>01</Text>
-                        <Text>01</Text>
+                    <ScrollView style={{height:139}}
+                    showsVerticalScrollIndicator={false}
+                    >
+                        {
+                            calendar.map(
+                                (calendar) => {
+                                    
+                                    return (
+                                        <TouchableOpacity style={{ flexDirection: 'row' }}
+                                        onPress={() => { props.navigation.navigate('Visitados', { dataId: calendar}) }}
+
+                                        >
+                                            <View style={{ width: windowWidth*0.1 }}>
+                                                <Text style={styles.data}> {calendar.dia}</Text>
+                                            </View>
+                                            <View style={{ width: windowWidth* 0.3, alignItems:'center' }}>
+                                                <Text style={[styles.data, { marginHorizontal: 20 }]}> {calendar.mes}</Text>
+
+                                            </View>
+                                            <View style={{ width: windowWidth*0.19  }}>
+                                                <Text style={styles.data}> {calendar.ano} </Text>
+                                            </View>
+                                            <View style={{ width: windowWidth*0.2 }}>
+                                                <Text style={[styles.data, { marginLeft: 10 }]}> {calendar.hora} </Text>
+                                            </View>
+                                        </TouchableOpacity>
+                                    )
+                                })
+                        }
                     </ScrollView>
 
                 </Animated.View>
@@ -260,21 +275,4 @@ const estilos = StyleSheet.create({
 })
 
 export default Local
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -8,7 +8,7 @@ import ListaLugares from "../screens/Pesquisar/ListaLugares/ListaLugares";
 import Local from "../screens/Pesquisar/Local/Local";
 import Pesquisar from "../screens/Pesquisar/pagePesquisar/Pesquisar";
 import RoutesTabs from "./Tabs";
-import { Home } from "../screens/Home/Home";
+import { Home } from "../screens/Home/Index";
 
 const MyStack = createStackNavigator();
 
