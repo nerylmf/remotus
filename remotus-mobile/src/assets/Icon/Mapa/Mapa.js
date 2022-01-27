@@ -8,7 +8,7 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 
 export function Mapa() {
 
-    const mapa = ` <svg width="324" height="180" viewBox="0 0 324 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    const mapa = ` <svg  viewBox="0 0 324 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="324" height="180" fill="url(#pattern0)"/>
     <defs>
     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -21,7 +21,7 @@ export function Mapa() {
     `;
     return (
         <View >
-            <SvgXml xml={mapa} style={{height: 180, width: 324, borderRadius: 10, justifyContent:'center', alignItems:'center', marginTop: 20 }} />
+            <SvgXml xml={mapa} style={{ marginTop: 20 }} />
         </View>
     )
 }

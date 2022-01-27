@@ -291,7 +291,7 @@ export function IconChat() {
 export function IconVoltar() {
 
     const IconVoltar = ` <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14.2625 16.2375L8.5375 10.5L14.2625 4.7625L12.5 3L5 10.5L12.5 18L14.2625 16.2375Z" fill="black"/>
+    <path d="M14.2625 16.2375L8.5375 10.5L14.2625 4.7625L12.5 3L5 10.5L12.5 18L14.2625 16.2375Z" fill="#0D1321"/>
     </svg>    
     `;
     return (
@@ -309,14 +309,14 @@ export function IconVoltar() {
 
 export function IconFavorito() {
 
-    const iconFavorito = `<svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8.25642 15L7.07113 13.921C2.86132 10.1035 0.0820312 7.58583 0.0820312 4.49591C0.0820312 1.9782 2.06023 0 4.57794 0C6.00029 0 7.36541 0.662125 8.25642 1.70845C9.14743 0.662125 10.5125 0 11.9349 0C14.4526 0 16.4308 1.9782 16.4308 4.49591C16.4308 7.58583 13.6515 10.1035 9.4417 13.9292L8.25642 15Z" fill="#FFEDDF"/>
+    const iconFavorito = `<svg width="20" height="18" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.25642 15L7.07113 13.921C2.86132 10.1035 0.0820312 7.58583 0.0820312 4.49591C0.0820312 1.9782 2.06023 0 4.57794 0C6.00029 0 7.36541 0.662125 8.25642 1.70845C9.14743 0.662125 10.5125 0 11.9349 0C14.4526 0 16.4308 1.9782 16.4308 4.49591C16.4308 7.58583 13.6515 10.1035 9.4417 13.9292L8.25642 15Z" fill="#0D1321"/>
     </svg>       
     `;
     return (
         <View >
             {/* <Image source={require('../assets/Icon/Buttons/Favorito.svg')} style={styles.iconMedio} /> */}
-            <SvgXml xml={iconFavorito} style={styles.iconMedio,{margin:8}} />
+            <SvgXml xml={iconFavorito}  style={{margin:9}} />
         </View>
     )
 }
@@ -331,7 +331,7 @@ export function IconShare() {
     return (
         <View >
             {/* <Image source={require('../assets/Icon/Buttons/share.svg')} style={styles.iconMedio} /> */}
-            <SvgXml xml={iconShare} style={styles.iconMedio,{margin:8}} />
+            <SvgXml xml={iconShare} style={styles.iconMedio,{margin:5}} />
         </View>
     )
 }
@@ -367,390 +367,11 @@ icon: {
     marginRight: 20,
 },
 iconMedio: {
-    marginRight: 11,
+    // marginRight: 11,
     width: 20,
-    height: 20
+    height: 20,
+   
 }
 })
-
-
-
-
-// ***************************************************************************
-
-// fucniona na web
-
-// import React from 'react'
-// import { Image, StyleSheet, Text, View } from 'react-native'
-
-
-
-// export function ButtonHome({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/home.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Home</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-// export function ButtonPesquisar({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/search.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Pesquisar</Text>
-
-
-//         </View>
-//     )
-// }
-
-// export function ButtonVisitados({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/logo.svg')} style={styles.buttonLogo} />
-//             <Text style={styles.txtBtn}>Visitados</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-// export function ButtonFavoritos({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/Favorito.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Favoritos</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-
-// export function ButtonPerfil({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/Perfil.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Perfil</Text>
-
-
-//         </View>
-//     )
-// }
-
-// export function ButtonFavoritar() {
-//     return (
-//         <View style={
-//             styles.container
-//         }>
-//             <Image source={require('../assets/Icon/Buttons/FavoritoLinha.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Favoritos</Text>
-
-
-//         </View>
-//     )
-// }
-
-// export function IconWifi() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/Wifi.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-
-// export function IconAr() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/ar.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-// export function IconCadeira() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/cadeira.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-
-// export function IconTomada() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/tomada.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-// export function IconReservado() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/porta.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-
-// export function IconSol() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/sol.svg')} style={styles.icon} />
-//         </View>
-//     )
-// }
-
-// export function IconCardapio() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/restaurante.svg')} style={styles.iconMedio} />
-//         </View>
-//     )
-// }
-
-// export function IconChat() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/chat.svg')} style={styles.iconMedio} />
-//         </View>
-//     )
-// }
-
-// export function IconVoltar() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/voltar.svg')} style={[styles.iconMedio, { margin: 8 }]} />
-//         </View>
-//     )
-// }
-// export function IconFavorito() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/Favorito.svg')} style={[styles.iconMedio,{ margin: 8 }]} />
-//         </View>
-//     )
-// }
-// export function IconShare() {
-//     return (
-//         <View >
-//             <Image source={require('../assets/Icon/Buttons/share.svg')} style={[styles.iconMedio,{ margin: 8 }]} />
-//         </View>
-//     )
-// }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         alignItems: 'center',
-
-//     },
-//     buttonLogo: {
-//         height: 22,
-//         width: 15,
-//         marginBottom: 3,
-//         marginTop: 4
-
-//     },
-//     button: {
-//         height: 22.2,
-//         width: 24,
-//         marginBottom: 3,
-//         marginTop: 4
-
-//     },
-//     txtBtn: {
-//         fontSize: 12,
-//         lineHeight: 14.5,
-//         letterSpacing: 0.5,
-//         fontWeight: 400,
-//         color: '#FFEDDF'
-//     },
-//     icon: {
-//         width: 30,
-//         height: 30,
-//         marginRight: 20,
-//     },
-//     iconMedio: {
-//         marginRight: 11,
-//         width: 20,
-//         height: 20
-//     }
-// })
-
-
-
-
-
-
-
-// //Antigo are no navegador
-// import React from 'react'
-// import { Image, StyleSheet, Text, View } from 'react-native'
-
-
-
-// export function ButtonHome({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/home.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Home</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-// export function ButtonPesquisar({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/search.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Pesquisar</Text>
-
-
-//         </View>
-//     )
-// }
-
-// export function ButtonVisitados({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/logo.svg')} style={styles.buttonLogo} />
-//             <Text style={styles.txtBtn}>Visitados</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-// export function ButtonFavoritos({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/Favorito.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Favoritos</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-
-// export function ButtonPerfil({ focused, color }) {
-//     return (
-//         <View style={[
-//             styles.container,
-//             { backgroundColor: focused ? '#ffeddf32' : '#0D1321' },
-//             { borderRadius: focused ? 10 : 0 },
-//             { paddingHorizontal: focused ? 12 : 0 },
-//             { paddingVertical: focused ? 5 : 0 }
-//         ]}>
-//             <Image source={require('../assets/Icon/Buttons/Perfil.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Perfil</Text>
-
-
-//         </View>
-//     )
-// }
-
-// export function ButtonFavoritar() {
-//     return (
-//         <View style={
-//             styles.container
-//         }>
-//             <Image source={require('../assets/Icon/Buttons/FavoritoLinha.svg')} style={styles.button} />
-//             <Text style={styles.txtBtn}>Favoritos</Text>
-
-
-//         </View>
-//     )
-// }
-
-
-// const styles = StyleSheet.create({
-//     container: {
-//         alignItems: 'center',
-
-//     },
-//     buttonLogo: {
-//         height: 22,
-//         width: 15,
-//         marginBottom: 3,
-//         marginTop: 4
-
-//     },
-//     button: {
-//         height: 22.2,
-//         width: 24,
-//         marginBottom: 3,
-//         marginTop: 4
-
-//     },
-//     txtBtn: {
-//         fontSize: 12,
-//         lineHeight: 14.5,
-//         letterSpacing: 0.5,
-//         fontWeight: 400,
-//         color: '#FFEDDF'
-//     }
-// })
-
 
 

@@ -6,13 +6,17 @@ import { Mapa } from "../../../assets/Icon/Mapa/Mapa";
 import { styles } from "./styles"
 import { Dimensions } from 'react-native';
 import { Estilos } from "../Estilos"
-import { AntDesign, Entypo } from "@expo/vector-icons"
+import { MaterialIcons } from "@expo/vector-icons"
 import calendario from "../Lugares/Calendario";
+import Comentarios from "../Lugares/Comentarios";
 
 const Local = (props) => {
     const initialState = { id: '', uri: '', nome: '', tipo: '', localizacao: '', datas: '', dia: '', mes: '', ano: '', hora: '' }
     const [lugar, setLugar] = useState(initialState)
     const [calendar, setCalendar] = useState(calendario)
+    const [comentario, setComentario] = useState(Comentarios)
+
+
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
     const animation = new Animated.Value(0)
@@ -66,6 +70,7 @@ const Local = (props) => {
                     <View style={styles.btnRight}>
                         <TouchableOpacity style={styles.btnCab}>
                             <IconFavorito />
+                            {/* <MaterialIcons name="favorite" size={25} /> */}
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[styles.btnCab, { marginLeft: 11 }]}>
@@ -174,17 +179,60 @@ const Local = (props) => {
                 {/* Mapa */}
                 <View style={styles.containerDescricao}>
                     <Text style={styles.subtitulo} >Mapa</Text>
-                    <Mapa />
+                    <View style={styles.mapa}>
+                        <Mapa />
+                    </View>
+
                 </View>
 
                 <View style={styles.linha}></View>
 
                 {/* Avaliações */}
-                {/* <View style={styles.containerDescricao}>
-                    <Text style={styles.subtitulo} >8 Avaliações</Text>
+                <View>
+                    <View style={styles.containerDescricao}>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={styles.subtitulo} >8 Avaliações</Text>
+                            <Text style={estilos.ponto}>.</Text>
+                            {/* <MaterialIcons name="star" size={20}  /> */}
+                            <Icon name='star' type='material' size={20} iconStyle={{ color: '#A96B3C', marginTop: 2 }} />
+                            <Text style={styles.subtitulo} >4,8</Text>
 
-                </View> */}
+                        </View>
+                    </View>
 
+                    <View style={{ marginHorizontal: 16, marginBottom: 100,zIndex:100 }}>
+                        <ScrollView
+                            style={styles.containerCards}
+                            horizontal={true}
+                            showsHorizontalScrollIndicator={false}
+                        >
+                            {comentario.map(
+                                (comment) => {
+                                    return (
+                                        <View style={[styles.card, { paddingHorizontal: 16, paddingTop: 25 }]}>
+                                            <View style={{ flexDirection: 'row' }}>
+                                                <Image source={{ uri: comment.uri }} style={[styles.imgPessoa]} />
+                                                <View style={[styles.inforComent, { marginBottom: 10 }]}>
+                                                    <Text style={[styles.subtitulo, { color: 'black' }]}>{comment.pessoa} </Text>
+                                                    <View style={{ flexDirection: 'row' }}>
+                                                        <Icon name='star' type='material' size={13} iconStyle={Estilos.marrom} />
+                                                        <Icon name='star' type='material' size={13} iconStyle={Estilos.marrom} />
+                                                        <Icon name='star' type='material' size={13} iconStyle={Estilos.marrom} />
+                                                        <Icon name='star' type='material' size={13} iconStyle={Estilos.marrom} />
+                                                        <Icon name='star-border' type='material' size={13} iconStyle={Estilos.marrom} />
+                                                    </View>
+                                                </View>
+                                            </View>
+                                            <Text style={{ fontSize: 12 }}>{comment.descricao}</Text>
+
+                                        </View>
+                                    )
+                                }
+                            )}
+
+                        </ScrollView>
+                    </View>
+                </View>
 
 
             </ScrollView>
@@ -194,29 +242,29 @@ const Local = (props) => {
             <View style={estilos.container}>
 
                 <Animated.View style={[styles.overlay, overlayStyle]}>
-                    <ScrollView style={{height:139}}
-                    showsVerticalScrollIndicator={false}
+                    <ScrollView style={{ height: 109 }}
+                        showsVerticalScrollIndicator={false}
                     >
                         {
                             calendar.map(
                                 (calendar) => {
-                                    
+
                                     return (
                                         <TouchableOpacity style={{ flexDirection: 'row' }}
-                                        onPress={() => { props.navigation.navigate('Visitados', { dataId: calendar}) }}
+                                            onPress={() => { props.navigation.navigate('Visitados', { dataId: calendar }) }}
 
                                         >
-                                            <View style={{ width: windowWidth*0.1 }}>
+                                            <View style={{ width: windowWidth * 0.1 }}>
                                                 <Text style={styles.data}> {calendar.dia}</Text>
                                             </View>
-                                            <View style={{ width: windowWidth* 0.3, alignItems:'center' }}>
+                                            <View style={{ width: windowWidth * 0.4, alignItems: 'center' }}>
                                                 <Text style={[styles.data, { marginHorizontal: 20 }]}> {calendar.mes}</Text>
 
                                             </View>
-                                            <View style={{ width: windowWidth*0.19  }}>
+                                            <View style={{ width: windowWidth * 0.19 }}>
                                                 <Text style={styles.data}> {calendar.ano} </Text>
                                             </View>
-                                            <View style={{ width: windowWidth*0.2 }}>
+                                            <View style={{ width: windowWidth * 0.2 }}>
                                                 <Text style={[styles.data, { marginLeft: 10 }]}> {calendar.hora} </Text>
                                             </View>
                                         </TouchableOpacity>
@@ -238,7 +286,7 @@ const Local = (props) => {
                             <Text style={[Estilos.txtRegular, { color: '#FFEDDF' }]}> 4,8 (8)</Text>
                             {/* <Text style={styles.ponto}>.</Text> */}
                             <Icon name='place' type='material' size={17} iconStyle={styles.iconVerde} />
-                            <Text style={[Estilos.txtRegular, { color: '#FFEDDF' }]}> testedoRemotus </Text>
+                            <Text style={[Estilos.txtRegular, { color: '#FFEDDF' }]}> {lugar.localizacao} </Text>
                         </View>
                     </View>
 
@@ -271,7 +319,14 @@ const estilos = StyleSheet.create({
         bottom: 0,
 
     },
-
+    ponto: {
+        width: 5,
+        height: 5,
+        borderRadius: 50,
+        backgroundColor: 'black',
+        marginHorizontal: 8,
+        marginTop: 12
+    },
 })
 
 export default Local

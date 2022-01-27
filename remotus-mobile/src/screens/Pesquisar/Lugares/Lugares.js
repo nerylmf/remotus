@@ -32,7 +32,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha',
+            localizacao: 'Pedra galinha',
 
         },
         {
@@ -40,7 +40,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {
@@ -48,7 +48,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {
@@ -56,7 +56,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {
@@ -65,7 +65,7 @@ export default
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
 
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {
@@ -73,7 +73,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {
@@ -81,7 +81,7 @@ export default
             uri: 'https://www.viajali.com.br/wp-content/uploads/2017/05/cafeterias-estilosas-brasil-5-730x476.jpg',
             nome: 'Espaço 35',
             tipo: 'Cafeteria',
-            localizacao: 'Pedra da galinha'
+            localizacao: 'Pedra galinha'
 
         },
         {

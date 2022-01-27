@@ -200,6 +200,35 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         color: '#FFFFFF',
         marginTop: 4.96
+    },
+    card: {
+        width: 240,
+        height: 150,
+        borderRadius: 15,
+        flexDirection: 'column',
+        marginRight: 20,
+        borderColor: '#E5E5E5',
+        borderWidth: 2
+
+    },
+    imgPessoa: {
+        backgroundColor: 'gray',
+        borderRadius: 50,
+        height: 40,
+        width: 40,
+    },
+
+    inforComent: {
+        marginLeft: 10,
+        justifyContent: 'center'
+
+    },
+    mapa: {
+        height: 180,
+        width: 324,
+        borderRadius: 10,
+        alignSelf:'center',
+  
     }
 
 })
