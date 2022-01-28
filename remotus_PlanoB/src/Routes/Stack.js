@@ -16,7 +16,7 @@ import Pesquisar from "../screens/Pesquisar/pagePesquisar/Pesquisar";
 import { Home } from '../screens/Home';
 import { Inicial } from '../screens/Inicial';
 import { HomeWorking } from '../screens/HomeWorking';
-import { Perfil} from '../screens/Perfil';
+import { Perfil } from '../screens/Perfil';
 
 const MyStack = createStackNavigator();
 
@@ -41,7 +41,6 @@ export function HomeNavigation() {
             screenOptions={{ animationEnabled: false }}
         >
             <MyStack.Screen name='home' component={Home} options={{ headerShown: false }} />
-            <MyStack.Screen name='home_working' component={HomeWorking} options={{ headerShown: false }} />
 
         </MyStack.Navigator>
     )
@@ -62,9 +61,11 @@ export function PesquisarNavigation() {
                 options={{ headerShown: false }}
             />
             <MyStack.Screen name='ListaLugares' component={ListaLugares}
-             options={{ headerShown: false }}
-             
-              />
+                options={{ headerShown: false }}
+
+            />
+            <MyStack.Screen name='home_working' component={HomeWorking} options={{ headerShown: false }} />
+
             {/* <MyStack.Screen name='Local' component={Local} options={{ headerShown: false }} /> */}
 
         </MyStack.Navigator>

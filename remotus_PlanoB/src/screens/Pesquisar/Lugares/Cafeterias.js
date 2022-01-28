@@ -3,8 +3,8 @@ export default
     {   
         id:1,
         uri: 'https://direcaoconsultoria.com.br/wp-content/uploads/2020/09/propaganda-enganosa-768x509.jpg',
-        nome: 'Nome do restaurante',
-        tipo: 'Resturante',
+        nome:'Café Patriota',
+        tipo:'Cafeteria',
         localizacao: 'Bairro Central',
         wifi:'Wi-Fi grátis',
         dia: '01',

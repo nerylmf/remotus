@@ -34,15 +34,18 @@ import {
 
 } from './styles';
 
-export function Perfil (props) {
+export function Perfil(props) {
 
     return (
-        <Container style={{paddingTop: 46 }}>
+        <Container style={{ paddingTop: 46 }}>
             <Content>
                 <Usuario>
                     <IconUser xml={ImgUserPerfil} />
                     <Text>Samuel Vieira</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => props.navigation.navigate('inicial')}
+
+                    >
                         <IconExit name='exit-to-app' color="black" />
                     </TouchableOpacity>
                 </Usuario>

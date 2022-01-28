@@ -178,7 +178,7 @@ const Local = (props) => {
                 {/* Mapa */}
                 <View style={styles.containerDescricao}>
                     <Text style={styles.subtitulo} >Mapa</Text>
-                    <View style={styles.mapa}>
+                    <View style={[styles.mapa,{marginTop:10}]}>
                         <Mapa />
                     </View>
 
@@ -249,7 +249,8 @@ const Local = (props) => {
 
                                     return (
                                         <TouchableOpacity style={{ flexDirection: 'row' }}
-                                            onPress={() => { props.navigation.navigate('Visitados', { dataId: calendar }) }}
+                                            // onPress={() => { props.navigation.navigate('Visitados', { dataId: calendar }) }}
+                                            onPress={() => { props.navigation.navigate('home_working') }}
 
                                         >
                                             <View style={{ width: windowWidth * 0.1 }}>
