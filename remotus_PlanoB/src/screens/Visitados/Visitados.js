@@ -56,7 +56,9 @@ const Visitados = (props) => {
                                             </View>
                                             <IconFavoritar />
                                         </View>
-                                        <TouchableOpacity style={estilos.btnAgendar}>
+                                        <TouchableOpacity style={estilos.btnAgendar}
+                                            // onPress={()=>props.navigation.navigate('Local')}
+                                        >
                                             <Text style={Estilos.txtBranco}>Agendar</Text>
 
                                         </TouchableOpacity >

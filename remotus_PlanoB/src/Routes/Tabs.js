@@ -22,7 +22,7 @@ export default function RoutesTabs() {
                         borderTopColor: 'transparent'
                 },
             }}
-                initialRouteName="Pesquisar"
+                initialRouteName="home"
             
     
                     // tabStyle: {
