@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "remotus",
+    "slug": "remotus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "./assets/splash.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#FFEDDF"
+
+    },
+    "android": {
+      "package": "com.remotus"
+    }
+  },
+  "name": "remotus"
+
+}
