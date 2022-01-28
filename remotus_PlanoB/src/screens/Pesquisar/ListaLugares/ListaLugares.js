@@ -67,7 +67,7 @@ const ListaLugares = ({ navigation }) => {
 
 
     return (
-        <View style={Estilos.background}>
+        <View style={[Estilos.background,{paddingTop:20}]}>
 
             <View style={[Estilos.conteinerPesquisar, { marginHorizontal: 16 },]}>
                 <IconPersquisar />

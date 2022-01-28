@@ -415,7 +415,7 @@ export function IconStarMarrom() {
 
 export function IconStarMarromG() {
 
-    const star = `<svg width="20" height="19" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const star = `<svg width="18" height="17" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M5.26316 8.03684L8.51579 10L7.65263 6.3L10.5263 3.81053L6.7421 3.48947L5.26316 0L3.78421 3.48947L0 3.81053L2.87368 6.3L2.01053 10L5.26316 8.03684Z" fill="#A96B3C"/>
     </svg>
       

@@ -54,7 +54,7 @@ const Local = (props) => {
     )
 
     return (
-        <View style={[styles.container, {paddingTop:20}]}>
+        <View style={[styles.container,{paddingTop:20}]}>
 
             <ScrollView
                 style={{ marginBottom: 70 }} //70
