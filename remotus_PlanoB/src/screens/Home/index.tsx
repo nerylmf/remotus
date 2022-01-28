@@ -7,7 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import { Footer } from '../Home/Footer';
 export function Home() {
   return (
-        <SafeAreaProvider>
+        <SafeAreaProvider style={{backgroundColor:'white'}}>
             <Lugares></Lugares>
             <Sugestao></Sugestao>
             <Categorias></Categorias>
